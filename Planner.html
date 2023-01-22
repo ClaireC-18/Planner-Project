@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>    
+
+  <title>Weekly Planner</title>
+</head>
+<body class="container mt-5">
+  <header>
+    <h1 class="text-center mb-5">Weekly Planner</h1>
+    <p id="title"></p>
+  </header>
+  
+  <div class="d-flex justify-content-end mb-4">
+    <button type="button" class="btn btn-danger border" onclick="allRemove();">delete all</button>
+  </div>
+    <div id="control_todo" class="d-none">
+    Event:<input type="text" name="todo" id="todo" aria-label="event">
+    Start: <input type="time" id="stime" name="stime" aria-label="start">
+    Finish: <input type="time" id="ftime" name="ftime" aria-label="finish">
+    <button onclick="insert();">Add</button>
+  </div>
+  <br>
+  <div id="week" class="row">
+    <button class="col" value="1" onclick="create_ins(this);"><a href="#sun">Sunday</a> </button>
+    <button class="col" value="2" onclick="create_ins(this);"><a href="#mon">Monday</a> </button>
+    <button class="col" value="3" onclick="create_ins(this);"><a href="#tue">Tuesday</a> </button>
+    <button class="col" value="4" onclick="create_ins(this);"><a href="#wen">Wednesday</a> </button>
+    <button class="col" value="5" onclick="create_ins(this);"><a href="#thr">Thursday</a> </button>
+    <button class="col" value="6" onclick="create_ins(this);"><a href="#fri">Friday</a> </button>
+    <button class="col" value="7" onclick="create_ins(this);"><a href="#sat">Saturday</a> </button>
+  </div>
+  <div id="control_edit" class="d-none">
+    Event:<input type="text" name="edit" id="edit" aria-label="event">
+    Start:<input type="time" id="estime" name="estime" aria-label="start">
+    Finish:<input type="time" id="eftime" name="eftime" aria-label="finish">
+    <button onclick="edit(this);">change</button>
+  </div>
+  <div id="weekend" class="row">
+    <div id="sun" class="col text-center">Todo List
+    </div>
+    <div id="mon" class="col text-center">Todo List
+    </div>
+    <div id="tue" class="col text-center">Todo List
+    </div>
+    <div id="wen" class="col text-center">Todo List
+    </div>
+    <div id="thr" class="col text-center">Todo List
+    </div>
+    <div id="fri" class="col text-center">Todo List
+    </div>
+    <div id="sat" class="col text-center">Todo List
+    </div>
+  </div>
+  
+</body>
+</html>

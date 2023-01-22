@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dancing+Script&family=Shadows+Into+Light&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+html, body {
+  background-color: beige;
+  font-family: "Dancing Script", cursive;
+}
+
+.container{
+  background-color: beige;
+  font-family: "Dancing Script", cursive;
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+#title {
+  font-family: "Amatic SC", cursive;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 6px;
+}
+
+#week a, button{
+  font-family: "Amatic SC", cursive;
+  font-size: 22px;
+  background-color: teal;
+  color: white;
+  text-decoration: none;
+}
+
+button .btn .btn-danger{
+  background-color: teal;
+}
+
+/* The Close Button */
+.close {
+  color: teal;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Modify Button */
+.mod {
+  float: top;
+  font-size: 10px;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+}
+
+.to_do{
+  display: grid;
+  grid-template-areas:
+    'to_do close'
+    'to_do close'
+    'time mod'
+    'time mod';
+}
+
+#values{
+  font-size: 22px;
+}
+
+#time{
+  font-size: 15px;
+}

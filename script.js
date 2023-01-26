@@ -49,10 +49,20 @@
       if ($("#control_edit").hasClass("d-none")) {
         $("#control_edit").removeClass("d-none");
       } else {
-        $(edit_val).siblings("span").html($("#edit").val());
-        $(edit_val).siblings("span").html($("#estime").val());
-        $(edit_val).siblings("span").html($("#eftime").val());
-        $("#control_edit").addClass("d-none");
+        var data={
+    edit:$("#edit").val(),
+    stime:$("#estime").val(),
+    etime:$("#eftime").val()
+};
+var text = '';
+if(data.edit !='' && data.stime !='' && data.etime !=''){
+    text = data.edit;
+    text1 = data.stime +' - '+ data.etime;
+}
+
+$('#values').text(text);
+$('#time').text(text1);
+$("#control_edit").addClass("d-none");
       }
     }
     
